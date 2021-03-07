@@ -1,12 +1,14 @@
 package org.academiadecodigo.javabank.controller;
 
 import org.academiadecodigo.javabank.model.Bank;
+import org.academiadecodigo.javabank.model.Customer;
+import org.academiadecodigo.javabank.services.AuthService;
 import org.academiadecodigo.javabank.view.LoginView;
 
 /**
  * The {@link LoginView} controller
  */
-public class LoginController extends AbstractController {
+public class LoginController extends AbstractController implements AuthService {
 
     private Controller nextController;
 
@@ -40,4 +42,13 @@ public class LoginController extends AbstractController {
         nextController.init();
     }
 
+    @Override
+    public boolean authenticate(Integer id) {
+        return false;
+    }
+
+    @Override
+    public Customer getAccessingCustomer() {
+        return null;
+    }
 }

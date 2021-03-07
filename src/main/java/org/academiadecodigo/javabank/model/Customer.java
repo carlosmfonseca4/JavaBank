@@ -1,16 +1,14 @@
 package org.academiadecodigo.javabank.model;
 
 import org.academiadecodigo.javabank.model.account.Account;
+import org.academiadecodigo.javabank.services.CustomerService;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * The customer domain entity
  */
-public class Customer {
+public class Customer implements CustomerService {
 
     private int id;
     private String name;
@@ -64,6 +62,21 @@ public class Customer {
         return accounts.keySet();
     }
 
+    @Override
+    public Customer get(Integer id) {
+        return null;
+    }
+
+    @Override
+    public List<Customer> list() {
+        return null;
+    }
+
+    @Override
+    public Set<Integer> listCustomersAccountIds(Integer id) {
+        return accounts.keySet();
+    }
+
     /**
      * Gets the balance of an {@link Account}
      *
@@ -72,6 +85,11 @@ public class Customer {
      */
     public double getBalance(int id) {
         return accounts.get(id).getBalance();
+    }
+
+    @Override
+    public void add(Customer customer) {
+
     }
 
     /**
