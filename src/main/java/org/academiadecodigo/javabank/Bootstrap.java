@@ -6,9 +6,12 @@ import org.academiadecodigo.javabank.controller.transaction.DepositController;
 import org.academiadecodigo.javabank.controller.transaction.WithdrawalController;
 import org.academiadecodigo.javabank.factories.AccountFactory;
 import org.academiadecodigo.javabank.model.Customer;
-import org.academiadecodigo.javabank.services.AccountServiceImpl;
-import org.academiadecodigo.javabank.services.AuthServiceImpl;
-import org.academiadecodigo.javabank.services.CustomerServiceImpl;
+import org.academiadecodigo.javabank.services.AccountServiceDatabase;
+import org.academiadecodigo.javabank.services.AuthServiceDatabase;
+import org.academiadecodigo.javabank.services.CustomerServiceDatabase;
+import org.academiadecodigo.javabank.services.useless.AccountServiceImpl;
+import org.academiadecodigo.javabank.services.useless.AuthServiceImpl;
+import org.academiadecodigo.javabank.services.useless.CustomerServiceImpl;
 import org.academiadecodigo.javabank.view.*;
 
 import java.util.HashMap;
@@ -19,16 +22,16 @@ import java.util.Map;
  */
 public class Bootstrap {
 
-    private AuthServiceImpl authService;
-    private CustomerServiceImpl customerService;
-    private AccountServiceImpl accountService;
+    private AuthServiceDatabase authService;
+    private CustomerServiceDatabase customerService;
+    private AccountServiceDatabase accountService;
 
     /**
      * Sets the authentication service
      *
      * @param authService the authentication service to set
      */
-    public void setAuthService(AuthServiceImpl authService) {
+    public void setAuthService(AuthServiceDatabase authService) {
         this.authService = authService;
     }
 
@@ -37,7 +40,7 @@ public class Bootstrap {
      *
      * @param customerService the customer service to set
      */
-    public void setCustomerService(CustomerServiceImpl customerService) {
+    public void setCustomerService(CustomerServiceDatabase customerService) {
         this.customerService = customerService;
     }
 
@@ -46,7 +49,7 @@ public class Bootstrap {
      *
      * @param accountService the account service to set
      */
-    public void setAccountService(AccountServiceImpl accountService) {
+    public void setAccountService(AccountServiceDatabase accountService) {
         this.accountService = accountService;
     }
 

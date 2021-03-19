@@ -1,9 +1,12 @@
 package org.academiadecodigo.javabank;
 
 import org.academiadecodigo.javabank.controller.Controller;
-import org.academiadecodigo.javabank.services.AccountServiceImpl;
-import org.academiadecodigo.javabank.services.AuthServiceImpl;
-import org.academiadecodigo.javabank.services.CustomerServiceImpl;
+import org.academiadecodigo.javabank.services.AccountServiceDatabase;
+import org.academiadecodigo.javabank.services.AuthServiceDatabase;
+import org.academiadecodigo.javabank.services.CustomerServiceDatabase;
+import org.academiadecodigo.javabank.services.useless.AccountServiceImpl;
+import org.academiadecodigo.javabank.services.useless.AuthServiceImpl;
+import org.academiadecodigo.javabank.services.useless.CustomerServiceImpl;
 
 public class App {
 
@@ -16,9 +19,9 @@ public class App {
     private void bootStrap() {
 
         Bootstrap bootstrap = new Bootstrap();
-        bootstrap.setAuthService(new AuthServiceImpl());
-        bootstrap.setAccountService(new AccountServiceImpl());
-        bootstrap.setCustomerService(new CustomerServiceImpl());
+        bootstrap.setAuthService(new AuthServiceDatabase());
+        bootstrap.setAccountService(new AccountServiceDatabase());
+        bootstrap.setCustomerService(new CustomerServiceDatabase());
         bootstrap.loadCustomers();
 
         Controller controller = bootstrap.wireObjects();

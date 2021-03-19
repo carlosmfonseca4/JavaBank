@@ -2,16 +2,26 @@ package org.academiadecodigo.javabank.model;
 
 import org.academiadecodigo.javabank.model.account.Account;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * The customer model entity
  */
+@Entity
+@Table(name = "customer")
 public class Customer extends AbstractModel {
 
     private String name;
+
+    @OneToMany(
+            cascade = {CascadeType.ALL},
+            orphanRemoval = true,
+            mappedBy = "customer"
+    )
     private List<Account> accounts = new ArrayList<>();
+
 
     /**
      * Gets the name of the customer

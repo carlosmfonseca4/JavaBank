@@ -1,7 +1,7 @@
 package org.academiadecodigo.javabank.services;
 
 import org.academiadecodigo.javabank.model.account.Account;
-import org.academiadecodigo.javabank.model.account.SavingsAccount;
+import org.academiadecodigo.javabank.services.useless.AccountServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 

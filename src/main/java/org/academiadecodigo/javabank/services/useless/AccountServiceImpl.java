@@ -1,7 +1,8 @@
-package org.academiadecodigo.javabank.services;
+package org.academiadecodigo.javabank.services.useless;
 
 import org.academiadecodigo.javabank.model.account.Account;
 import org.academiadecodigo.javabank.model.account.AccountType;
+import org.academiadecodigo.javabank.services.AccountService;
 
 import java.util.Collections;
 import java.util.HashMap;

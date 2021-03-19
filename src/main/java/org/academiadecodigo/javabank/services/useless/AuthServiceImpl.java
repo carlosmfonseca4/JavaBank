@@ -1,6 +1,8 @@
-package org.academiadecodigo.javabank.services;
+package org.academiadecodigo.javabank.services.useless;
 
 import org.academiadecodigo.javabank.model.Customer;
+import org.academiadecodigo.javabank.services.AuthService;
+import org.academiadecodigo.javabank.services.CustomerService;
 
 /**
  * An {@link AuthService} implementation

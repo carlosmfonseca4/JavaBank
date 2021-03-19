@@ -1,9 +1,10 @@
-package org.academiadecodigo.javabank.services;
+package org.academiadecodigo.javabank.services.useless;
 
 import org.academiadecodigo.javabank.model.AbstractModel;
 import org.academiadecodigo.javabank.model.Customer;
 import org.academiadecodigo.javabank.model.Model;
 import org.academiadecodigo.javabank.model.account.Account;
+import org.academiadecodigo.javabank.services.CustomerService;
 
 import java.util.*;
 import java.util.stream.Collectors;
