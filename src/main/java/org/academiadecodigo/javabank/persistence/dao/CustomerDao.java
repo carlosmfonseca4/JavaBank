@@ -1,6 +1,7 @@
 package org.academiadecodigo.javabank.persistence.dao;
 
 import org.academiadecodigo.javabank.persistence.model.Customer;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
